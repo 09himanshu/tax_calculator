@@ -54,6 +54,9 @@ Create an input file like input/input1.txt with one item per line.
 node src/index.js ./input/input1.txt
 ```
 
+### 4. Check the file src/utils/generic.utils.js
+This file contains a list of reserved keywords for identifying food, books, and medical products. I've tried to include common terms, but coverage may vary depending on the test cases — feel free to customize or expand it as needed.
+
 ## 👨‍💻 Author
 
 **Himanshu Sah**

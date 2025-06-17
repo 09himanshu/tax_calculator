@@ -10,8 +10,8 @@ export class Receipt {
             this.items.push({
                 quantity: item.quantity,
                 name: item.name,
-                // price: taxedPrice
-                price: item.quantity*item.basePrice
+                price: taxedPrice
+                // price: item.quantity*item.basePrice
             });
             this.salesTaxes += taxedPrice - (item.basePrice * item.quantity);
             this.total += taxedPrice;
