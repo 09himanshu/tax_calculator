@@ -1,0 +1,6 @@
+1 pencil at 0.50
+1 notebook at 2.49
+1 packet of biscuits at 1.99
+1 music CD at 14.99
+1 chocolate bar at 0.85
+1 bottle of water at 0.99

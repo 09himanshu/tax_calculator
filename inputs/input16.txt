@@ -1,0 +1,5 @@
+1000 pencils at .50
+0 candy at .90
+1 candy at .90
+1 chocolate at 1.90
+2 chocolate at 0.00
