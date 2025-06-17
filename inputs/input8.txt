@@ -1,5 +1,2 @@
-1 novel at 12.49
-1 imported magazine at 6.99
-1 comic book at 3.25
-1 dictionary at 25.99
-1 imported textbook at 55.00
+some invalid input
+just random words

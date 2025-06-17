@@ -1,23 +1,40 @@
 import { Item } from '../model/item.model.js';
+import { GENERICS } from '../utils/generics.utils.js';
 
 export class InputParser {
   static parse(input) {
     const normalizedInput = input.replace(/\s+/g, ' ').trim();
+    const itemRegex = /(\d+)\s*([^\d]+?)\s+a\s*t\s+(\d+\.\d{2})/gi;
 
-    const itemRegex = /(\d+) (.*?) at (\d*\.\d{2})/g;
-    const items = [];
+    const itemMap = new Map();
+
     let match;
-
     while ((match = itemRegex.exec(normalizedInput)) !== null) {
-
       const quantity = parseInt(match[1]);
-      const name = match[2].trim();
+      const name = match[2].trim().toLowerCase();
       const price = parseFloat(match[3]);
       const isImported = name.includes('imported');
-      const isExempt = this.isExemptItem(name);
+      const isExempt = GENERICS(name);
 
-      items.push(new Item(quantity, name, price, isImported, isExempt));
+      const itemKey = `${name}_${price}`;
+
+      if (itemMap.has(itemKey)) {
+        itemMap.get(itemKey).quantity += quantity;
+      } else {
+        itemMap.set(itemKey, {
+          quantity,
+          name,
+          price,
+          isImported,
+          isExempt
+        });
+      }
     }
+
+    const items = Array.from(itemMap.values()).map(
+      ({ quantity, name, price, isImported, isExempt }) =>
+        new Item(quantity, name, price, isImported, isExempt)
+    );
 
     if (items.length === 0) {
       throw new Error('No valid items found in input');
@@ -25,14 +42,4 @@ export class InputParser {
 
     return items;
   }
-
-  static isExemptItem(name) {
-    const exemptKeywords = ['book', 'novel', 'magazine', 'comic', 'dictionary', 'encyclopedia',
-      'textbook', 'journal', 'chocolate', 'chocolates', 'bar', 'candy', 'fruit', 'vegetable', 'meat', 
-      'bread', 'snack', 'cookie', 'biscuit', 'pasta', 'rice', 'cheese', 'milk', 'egg', 'eggs', 'beverage', 
-      'drink', 'pills', 'medicine', 'drug', 'tablet', 'ointment', 'syrup', 'vaccine', 'bandage', 'injection', 
-      'first aid', 'painkiller', 'antibiotic', 'supplement', 'vitamin', 'mask', 'sanitizer'];
-    return exemptKeywords.some(keyword => name.includes(keyword));
-  }
 }
-

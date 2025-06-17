@@ -1,5 +1,21 @@
-1 imported fountain pen at 15.00
-1 imported wristwatch at 199.99
-1 imported packet of cheese at 6.50
-1 imported yoga mat at 25.00
-1 imported chocolate truffles at 13.75
+1 bottle of shampoo at 5.25
+1 deodorant spray at 3.75
+1 luxury hand cream at 19.99
+1 imported bottle of perfume at 47.50
+1 novel at 12.49
+1 imported magazine at 6.99
+1 comic book at 3.25
+1 dictionary at 25.99
+1 imported textbook at 55.00
+
+
+                            1 novel at 12.49
+                1 imported magazine at 6.99
+1               comic book at                                           3.25
+                                                                    1 dictionary                                                        at 25.99
+1 imported textbook at  55.00
+
+1    pack of pasta at 3.99
+1 b      ottle of olive oil a        t 6.99
+1 imported gourmet cheese t 10.99
+1 box of organic tea at 4.50

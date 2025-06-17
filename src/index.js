@@ -10,9 +10,6 @@ function processInputFile(filePath) {
     const items = InputParser.parse(input);
     const receipt = new Receipt();
 
-
-    console.log(items)
-
     items.forEach(item => {
       const taxedPrice = TaxCalculator.calculate(item);
       receipt.addItem(item, taxedPrice);
@@ -26,5 +23,5 @@ function processInputFile(filePath) {
 
 // console.log(process.cwd())
 
-const inputFile = path.join(process.cwd(), './inputs/input15.txt');
+const inputFile = path.join(process.cwd(), './inputs/input9.txt');
 processInputFile(inputFile);

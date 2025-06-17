@@ -7,14 +7,14 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "keywords": ["Tax Calculator", "Sales Tax", "Import Tax"],
+  "keywords": [
+    "Tax Calculator",
+    "Sales Tax",
+    "Import Tax"
+  ],
   "author": "Himanshu Sah",
   "license": "ISC",
   "type": "module",
-  "dependencies": {
-    "dotenv": "16.5.0",
-    "express": "5.1.0"
-  },
   "devDependencies": {
     "nodemon": "3.1.10"
   }

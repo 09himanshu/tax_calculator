@@ -1,5 +1,0 @@
-0 book at 0.00
-1 item at 0.01
-5 imported USB drives at 999.99
-100 bananas at 0.25
-999 boxes of cereal at 2.50
