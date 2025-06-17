@@ -51,7 +51,7 @@ Create an input file like input/input1.txt with one item per line.
 
 ### 3. Run the Program
 ```
-node src/index.js ./input/input1.txt
+node src/index.js ./inputs/input1.txt
 ```
 
 ### 4. Check the file src/utils/generic.utils.js
