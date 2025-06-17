@@ -42,26 +42,18 @@ Total: 29.83
 
 ```
 git clone https://github.com/09himanshu/tax_calculator.git
-cd sales-tax-calculator
+cd tax_calculator
 ```
 
 ### 2. Add Input File
 
 Create an input file like input/input1.txt with one item per line.
 
-3. Run the Program
-
-node src/index.js input/input1.txt
-
-🛠️ Design Decisions
-
-Exemption Rules: Centralized using CategoryClassifier.js for maintainability.
-
-Rounding Logic: Abstracted into a utility function and tested.
-
-Error Handling: Invalid lines are skipped with a warning, allowing the rest of the receipt to be processed.
-
+### 3. Run the Program
+```
+node src/index.js ./input/input1.txt
+```
 
 ## 👨‍💻 Author
 
-** Himanshu Sah **
+**Himanshu Sah**
