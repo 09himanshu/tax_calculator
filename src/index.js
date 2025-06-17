@@ -4,6 +4,9 @@ import { InputParser } from './service/input.service.js'
 import { TaxCalculator } from './service/taxCalculate.service.js'
 import { Receipt } from './model/recept.model.js'
 
+
+const filePath = process.argv[2] || './inputs/input1.txt'
+
 function processInputFile(filePath) {
   try {
     const input = fs.readFileSync(filePath, 'utf8');
@@ -23,5 +26,5 @@ function processInputFile(filePath) {
 
 // console.log(process.cwd())
 
-const inputFile = path.join(process.cwd(), './inputs/input9.txt');
+const inputFile = path.join(process.cwd(), filePath);
 processInputFile(inputFile);
